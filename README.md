@@ -25,8 +25,6 @@
 
 ### 0주차(0824(월) 이전)
 
-* `git, github 기초 for only st102 sprint`
-  * 영상, PDF 제공
 * `github Pull Request 보내는 방법`
   * 영상, PDF 제공
 
