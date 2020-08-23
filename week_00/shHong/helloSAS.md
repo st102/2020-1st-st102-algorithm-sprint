@@ -1,9 +1,9 @@
 # 0주차 hello sas 출력
 
 ## 풀이방법
-'''python
+,,,python
 print("Hellop SAS!")
-'''
+,,,
 
 ## 다른사람의 풀이방법
 *  똑같음
