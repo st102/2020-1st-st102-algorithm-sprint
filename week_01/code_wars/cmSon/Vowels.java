@@ -4,13 +4,12 @@ public class Vowels {
 
     public static int getCount(String str) {
       int vowelsCount = 0;
-      // your code here
-      int str_l = str.length();
+      int length_to_string = str.length();
       
       for (int i = 0; i < str_l; i++){
-        char c_temp = str.charAt(i);
+        char alphabet = str.charAt(i);
         
-        if (c_temp == 'a' || c_temp == 'e' || c_temp == 'i' || c_temp == 'o' || c_temp == 'u'){
+        if (alphabet == 'a' || alphabet == 'e' || alphabet == 'i' || alphabet == 'o' || alphabet == 'u'){
           vowelsCount++;
         }
       }
