@@ -20,6 +20,39 @@ string get_middle(string input){
 *  삼항연산자를 이용하여 주어진 문자열의 길이가 홀수인지 짝수인지 구분하였고,
 *  그에 따라 문자열을 return 해주었다.
 
+### 테스트 코드
+```c++
+Describe(Sample_tests)
+{
+    It(test_basic_sentece)
+    {
+        Assert::That(disemvowel("This website is for losers LOL!"), 
+            Equals("Ths wbst s fr lsrs LL!"));
+    }
+  
+  It(test_no_vowel_sentence)
+    {
+        Assert::That(disemvowel("Ths wbst s fr lsrs LL!"), 
+            Equals("Ths wbst s fr lsrs LL!"));
+    }
+
+  It(test_all_vowel_sentence)
+    {
+        Assert::That(disemvowel("i eie i o oe O"), 
+            Equals("     "));
+    }
+  
+  
+  It(test_empty_sentence)
+    {
+        Assert::That(disemvowel(""), 
+            Equals(""));
+    }
+};
+```
+
+*  테스트 코드는 기본 문장,모음이 없는 문장, 모음만 있는 문장, 아무것도 없는 경우로 나누어 작성하였다.
+
 ## 다른 사람의 풀이 방법
 
 ### Best Practice
