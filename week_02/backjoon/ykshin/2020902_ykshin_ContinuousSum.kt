@@ -8,15 +8,22 @@ fun main() {
     val n = bufferedReader.readLine().toInt()
     val stringTokenizer = StringTokenizer(bufferedReader.readLine())
     val sequence = Array(n) { stringTokenizer.nextToken().toInt() }
-    var max = sequence[0]
+    var sumMax = sequence[0]
     for (i in 1 until n) {
-        if (sequence[i - 1] > 0 && sequence[i] + sequence[i - 1] > 0) {
+        if ( isPositive(sequence,i-1)&& isValuable(sequence,i)) {
             sequence[i] += sequence[i - 1]
         }
-        if (max < sequence[i]) {
-            max = sequence[i]
+        if (sumMax < sequence[i]) {
+            sumMax = sequence[i]
         }
     }
+    println(sumMax)
+}
 
-    println(max)
+fun isValuable(sequence: Array<Int>, i: Int): Boolean {
+    return sequence[i] + sequence[i - 1] > 0
+}
+
+fun isPositive(sequence: Array<Int>, i: Int):Boolean{
+    return sequence[i] > 0
 }
