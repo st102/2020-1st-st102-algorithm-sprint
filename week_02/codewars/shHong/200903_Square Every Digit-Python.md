@@ -5,7 +5,7 @@
 ## 풀이방법
 ```python
 def square_digits(num):
-    return int("".join([str(int(n) ** 2) for n in str(num)]))
+    return int("".join(str(int(n) ** 2) for n in str(num)))
 ```
 * 입력받은 정수를 string으로 변환 후 제곱하여 join 했다.
 
