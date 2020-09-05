@@ -69,6 +69,17 @@ public class Kata {
 ```
 * 가독성이 아주 좋은 것 같다.
 
+```java
+public class High_Low {
+    public static String highAndLow(String numbers) {
+        int[] digits = Stream.of(numbers.split(" ")).mapToInt(Integer::parseInt).toArray();
+        Arrays.sort(digits);
+        return String.format("%d %d", digits[digits.length - 1], digits[0]);
+    }
+}
+```
+* 동기의 코드다. 간결하게 잘짠 것 같다. 
+
 ## 배운 점
 
 * 나도 모르게 문제를 읽고 쉽게 판단내려서 그냥 생각없이 푼 경우가 많은가보다. 앞으로 다른 방법을 이용해서 풀 수 있나 고민을 하는 시간을 가져야겠다. 
