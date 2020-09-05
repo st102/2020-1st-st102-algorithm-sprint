@@ -36,6 +36,45 @@ string highAndLow(const string& numbers){
 *  주어진 문자열을 char형으로 변환하여 strtok함수를 이용하여 공백을 구분하였다. 
 *  문자열에서 맨 처음에 나오는 숫자를 기준으로 while문에서 highest 와 lowest를 찾아주었다.
 
+## 테스트 코드
+
+```c++
+Describe(HighAndLow){
+  It(test_code_basic_numbers){
+    Assert::That(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"), Equals("42 -9"));
+  }
+  
+  It(test_code_sort_numbers){
+    Assert::That(highAndLow("-10 -7 -3 1 3 5 7"), Equals("7 -10"));
+  }
+  
+  It(test_code_single_number){
+    Assert::That(highAndLow("50"), Equals("50 50"));
+  }
+  
+  It(test_code_only_plus_numbers){
+    Assert::That(highAndLow("8 3 10 9 89"), Equals("89 3"));
+  }
+  
+   It(test_code_only_minus_numbers){
+    Assert::That(highAndLow("-8 -100 -91 -78 -5"), Equals("-5 -100"));
+  }
+  
+   It(test_code_only_plus_and_zero_numbers){
+    Assert::That(highAndLow("8 3 10 9 89 0"), Equals("89 0"));
+  }
+  
+  It(test_code_only_minus_and_zero_numbers){
+    Assert::That(highAndLow("-8 -100 -91 -78 -5 0"), Equals("0 -100"));
+  }
+  
+  It(test_code_only_minus_and_minus_numbers){
+    Assert::That(highAndLow("-8 9 -12 10 -91 15 -78 99 -5"), Equals("99 -91"));
+  }
+};
+```
+*  음수, 양수, 0을 통해 나올수 있는 숫자 조합들에 대하여 테스트 코드를 작성하였다.
+
 ## 다른 사람의 풀이 방법
 
 ### Best Practice
