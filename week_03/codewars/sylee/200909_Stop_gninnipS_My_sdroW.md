@@ -11,7 +11,7 @@ def spin_words(sentence):
     words = sentence.split()
     return " ".join(
         [
-            word if len(word) < 5 else "".join(list(reversed(word)))
+            element if len(element) < 5 else "".join(list(reversed(element)))
             for element in words
         ]
     )
