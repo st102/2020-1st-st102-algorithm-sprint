@@ -1,3 +1,5 @@
+package week_02.codewars.cmSon;
+
 public class SquareDigit {
 
     public int squareDigits(int n) {
