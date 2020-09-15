@@ -1,8 +1,8 @@
-# Dismvowel Trolls
+# Duplicate Encoder
 
 ## 문제 설명
 
-*  주어진 배열에서 non-integer를 제외한 integer 배열을 만들어라.
+*  주어진 문자열에서 2번 이상 나오는 문자는 ")"로 1번만 나오는 문자는 "("로 변환하여 새로운 문자열을 만들어라
 
 ## 나의 풀이 방법
 
